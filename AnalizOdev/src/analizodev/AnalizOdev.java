@@ -4,6 +4,7 @@
  */
 package analizodev;
 
+import java.util.Scanner;
 import java.util.Timer;
 
 /**
@@ -17,14 +18,19 @@ public class AnalizOdev {
      */
     
     public static void main(String[] args) {
-        int N=100000000;
-        int myArray[]= new int[N];
-        int number=454;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Dizi boyutunu giriniz: ");
+        int N=input.nextInt();
+                
+        System.out.println("Aranacak sayiyi giriniz: ");
+        int number=input.nextInt();
         
+        int myArray[]= new int[N];
+            
         for (int i=0; i<N;i++){
             myArray[i] = i*3;
             //System.out.println("dizinin " + i +". elemanı "+myArray[i]);
-        }
+        }   
         
         long startTime = System.nanoTime();
         for (int i=0; i<N;i++){
