@@ -6,7 +6,9 @@
 
 package sorting;
 
+import static java.lang.System.in;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -27,14 +29,15 @@ public class Sorting {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        int N=1000;
+        int N;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Aranacak dizi boyutunu giriniz: ");
+        N=input.nextInt();
         Random r= new Random();
         int myArray[]= new int[N];
         for (int i=0; i<myArray.length; i++){
             int a=r.nextInt(100);
-            myArray[i]=a;
-            //System.out.println("dizi:"+myArray[i]);
-            
+            myArray[i]=a;            
         }
         
         
@@ -85,7 +88,7 @@ public class Sorting {
         }
         //System.out.println("BubleSort karşılaştırma sayısı:"+comparation+"\nswap sayisi:"+ swap);
     }
-    
+     
     public static void selectionSort(int [] dizi)
     {
         int temp;
