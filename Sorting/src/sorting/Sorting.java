@@ -115,16 +115,23 @@ public class Sorting {
       for (int i = 1; i < dizi.length; i++) {
             newValue = dizi[i];
             j = i;
+            boolean girdim= false;
             insertionComparation++;
             while (j > 0 && dizi[j - 1] > newValue) {
                   insertionSwap++;
                   dizi[j] = dizi[j - 1];
                   j--;
+                  girdim=true;
             }
             
             dizi[j] = newValue;
+            if (girdim==false){
+                insertionComparation++;
+                girdim=true;
+            }
       }
+      
       //System.out.println("InsertionSort karşılaştırma sayısı:"+comparation+"\nswap sayisi:"+ swap);
       
     }
-}
+} 
